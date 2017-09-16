@@ -1,2 +1,4 @@
 # IoTtalk-APP
-Wrap IoTtalk to Desktop APP !!!
+Using electron (https://electron.atom.io)
+
+## WIP
