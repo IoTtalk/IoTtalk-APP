@@ -1,0 +1,8 @@
+webview {
+	display:inline-flex;
+	width:100%;
+	height:100%;
+}
+webview.hide {
+	visibility: hidden;
+}

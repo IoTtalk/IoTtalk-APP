@@ -1,4 +1,6 @@
 const {app, BrowserWindow} = require('electron');
+const path = require('path');
+const url = require('url');
 let win;
 
 function createWindow () {
@@ -7,14 +9,20 @@ function createWindow () {
 			width: 800,
 		   	height: 1500,
 			icon: __dirname + '/favicon.ico',
-        	webPreferences: {
+        	/*webPreferences: {
             	nodeIntegration: false
-		   }
+		   }*/
     	}
 	);
-	win.loadURL('http://140.113.199.199:7788/connection');
+	// win.webContents.openDevTools();
+//	win.loadURL('http://140.113.199.199:7788/connection');
+		 win.loadURL(url.format({
+				 pathname: path.join(__dirname, 'index.html'),
+				protocol: 'file:',
+			   slashes: true
+		}))
+	 
 	let contents = win.webContents;
-	console.log(contents);
 }
 
 app.on('ready', createWindow);

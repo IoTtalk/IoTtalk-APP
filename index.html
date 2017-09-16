@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" 
+            onload="window.$ = window.jQuery = module.exports;"></script>
+        <script type="text/javascript" src='./js/semantic.min.js'></script>
+        <script type="text/javascript" src='./js/index.js'></script>
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    </head>
+    <body>
+            <div class="row">
+                <div class="ui blue pointing menu">
+                  <a class="item active" index="1">Project</a>
+                  <a class="item" index="2">Device Feature Management</a>
+                  <a class="item" index="3">Device Monitor</a>
+                </div>
+            </div>
+            <webview id="iottalk_gui" src="http://140.113.199.199:7788/connection" disablewebsecurity>
+            </webview>
+            <webview id="dfm" src="http://140.113.199.199:7788/dfm" disablewebsecurity hidden="true">
+            </webview>
+            <webview id="monitor" src="http://140.113.199.199:9999/list_all" disablewebsecurity hidden="true">
+            </webview>
+        </div>
+    </body>
+</html>
