@@ -6,7 +6,6 @@ onload = () => {
 		//indicator.innerText = 'loading...';
 	}
 	const loadstop = () => {
-
 		//indicator.innerText = '';
 	}
 	webview.addEventListener('did-start-loading', loadstart);
@@ -36,4 +35,17 @@ onload = () => {
 		}
 	});
 	$('.ui.dropdown').dropdown();
+
+	$('.ui.dropdown.item').find('.menu').children().each(
+		function() {
+  			$(this).click(function(){
+				const remote = require('electron').remote;
+				const BrowserWindow = remote.BrowserWindow;
+				var win = new BrowserWindow({webPreferences: {
+            	nodeIntegration: false
+		   }});
+				win.loadURL($(this).attr('url'));
+  			});
+		}
+	);
 }

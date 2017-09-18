@@ -1,7 +1,5 @@
 {
   "name": "IoTtalk",
   "main": "main.js",
-  "devDependencies": {
-    "electron-packager": "^9.1.0"
-  }
+  "devDependencies": {"electron": "~1.6.2"}
 }
