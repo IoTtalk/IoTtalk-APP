@@ -6,6 +6,7 @@ onload = () => {
 		//indicator.innerText = 'loading...';
 	}
 	const loadstop = () => {
+
 		//indicator.innerText = '';
 	}
 	webview.addEventListener('did-start-loading', loadstart);
@@ -18,18 +19,21 @@ onload = () => {
 			.removeClass('active');
 			switch($(this).attr("index")){
 				case '1':
-					$('webview').hide();
-					$('#iottalk_gui').show();
+					$('webview').fadeOut(300);
+					$('#iottalk_gui').fadeIn(300);
 					break;
 				case '2':
-					$('webview').hide();
-					$('#dfm').show();
+					$('webview').fadeOut(300);
+					$('#dfm').fadeIn(300);
+					//document.querySelector('webview').reload();
 					break;
 				case '3':
-					$('webview').hide();
-					$('#monitor').show();
+					$('webview').fadeOut(300);
+					$('#monitor').fadeIn(300);
+					//document.querySelector('webview').reload();
 					break;
 			}
 		}
 	});
+	$('.ui.dropdown').dropdown();
 }

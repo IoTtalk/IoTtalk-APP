@@ -2,7 +2,14 @@ webview {
 	display:inline-flex;
 	width:100%;
 	height:100%;
+	border-width: 2px
 }
 webview.hide {
 	visibility: hidden;
+}
+.ui.inverted.menu{
+	border-radius: 0px;
+}
+.ui.inverted.menu .olive.active.item{
+	border-radius: 0px;
 }
