@@ -6,4 +6,4 @@ Using electron (https://electron.atom.io)
 ## Prebuild download
 | Platform | Download |
 | -------- |:--------:|
-|  macOS   | [link](https://drive.google.com/open?id=0BxfwACpMA6pDb05udlZJLXZxYjg)| 
+|  macOS   | [link](https://drive.google.com/uc?export=download&id=0BxfwACpMA6pDb05udlZJLXZxYjg)| 
